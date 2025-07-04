@@ -23,6 +23,8 @@ const StartTimedExamInstructions = () => {
           id="exam.startExamInstructions.text1"
           defaultMessage="This exam has a time limit associated with it. "
         />
+        dasdasdasd
+        associatedd
         <strong>
           <FormattedMessage
             id="exam.startExamInstructions.text2"

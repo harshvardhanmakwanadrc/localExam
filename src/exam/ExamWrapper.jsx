@@ -36,7 +36,7 @@ const ExamWrapper = ({ children, ...props }) => {
 
   useEffect(() => {
     // fetch exam data on exam sequences or if no exam data has been fetched yet
-    if (sequence.isTimeLimited || isLoading) {
+    if (sequence?.isTimeLimited || isLoading) {
       loadInitialData();
     }
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -52,7 +52,7 @@ const ExamWrapper = ({ children, ...props }) => {
   return (
     <Exam
       isGated={isGated}
-      isTimeLimited={sequence.isTimeLimited}
+      isTimeLimited={sequence?.isTimeLimited || false}
       originalUserIsStaff={originalUserIsStaff}
       canAccessProctoredExams={canAccessProctoredExams}
     >

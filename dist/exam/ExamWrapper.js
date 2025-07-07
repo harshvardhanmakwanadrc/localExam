@@ -65,7 +65,7 @@ var ExamWrapper = function ExamWrapper(_ref) {
   var isGated = sequence && sequence.gatedContent !== undefined && sequence.gatedContent.gated;
   (0, _react.useEffect)(function () {
     // fetch exam data on exam sequences or if no exam data has been fetched yet
-    if (sequence.isTimeLimited || isLoading) {
+    if (sequence !== null && sequence !== void 0 && sequence.isTimeLimited || isLoading) {
       loadInitialData();
     }
     // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -79,7 +79,7 @@ var ExamWrapper = function ExamWrapper(_ref) {
   }
   return /*#__PURE__*/(0, _jsxRuntime.jsxs)(_Exam["default"], {
     isGated: isGated,
-    isTimeLimited: sequence.isTimeLimited,
+    isTimeLimited: (sequence === null || sequence === void 0 ? void 0 : sequence.isTimeLimited) || false,
     originalUserIsStaff: originalUserIsStaff,
     canAccessProctoredExams: canAccessProctoredExams,
     children: ["hndjashndjkndjasndnasnda dasDAS ddasd dasdas", children]

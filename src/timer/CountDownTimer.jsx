@@ -14,7 +14,7 @@ const CountDownTimer = injectIntl((props) => {
   const [isShowTimer, showTimer, hideTimer] = useToggle(true);
   const { intl } = props;
   const { time_remaining_seconds: timeRemainingSeconds } = props.attempt;
-
+  console.log(timeRemainingSeconds);
   const generateAccessbilityString = () => {
     const humanizedTime = generateHumanizedTime(timeRemainingSeconds);
     /**

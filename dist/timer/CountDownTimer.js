@@ -32,6 +32,7 @@ var CountDownTimer = (0, _i18n.injectIntl)(function (props) {
     hideTimer = _useToggle2[2];
   var intl = props.intl;
   var timeRemainingSeconds = props.attempt.time_remaining_seconds;
+  console.log(timeRemainingSeconds);
   var generateAccessbilityString = function generateAccessbilityString() {
     var humanizedTime = (0, _helpers.generateHumanizedTime)(timeRemainingSeconds);
     /**
